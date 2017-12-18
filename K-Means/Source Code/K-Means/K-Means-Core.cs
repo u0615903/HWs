@@ -125,7 +125,7 @@ namespace K_Means
 
             foreach (cord item in data)
             {
-                g.FillPie(b1, (float)((item.x * 10) + 206), (float)((item.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
+                g.FillPie(b1, (float)((item.x * 10) + 206), (float)(206 - (item.y * 10)), (float)8, (float)8, (float)0, (float)360);
             }
 
             // Step 1. 
@@ -134,8 +134,8 @@ namespace K_Means
             // 設定第二群的中心點
             groupCenterPoint2 = new cord() { x = centerPoint.x + OffieSetGroupPoint2.x, y = centerPoint.y + OffieSetGroupPoint2.y };            
 
-            g.FillPie(bg, (float)((groupCenterPoint1.x * 10) + 206), (float)((groupCenterPoint1.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
-            g.FillPie(bg, (float)((groupCenterPoint2.x * 10) + 206), (float)((groupCenterPoint2.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
+            g.FillPie(bg, (float)((groupCenterPoint1.x * 10) + 206), (float)(206 - (groupCenterPoint1.y * 10)), (float)8, (float)8, (float)0, (float)360);
+            g.FillPie(bg, (float)((groupCenterPoint2.x * 10) + 206), (float)(206 - (groupCenterPoint2.y * 10)), (float)8, (float)8, (float)0, (float)360);
 
             f.Refresh();
             f.Invalidate();
@@ -178,8 +178,8 @@ namespace K_Means
                 groupCenterPoint1 = this.center(group1);
                 groupCenterPoint2 = this.center(group2);
 
-                g.FillPie(bg, (float)((groupCenterPoint1.x * 10) + 206), (float)((groupCenterPoint1.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
-                g.FillPie(bg, (float)((groupCenterPoint2.x * 10) + 206), (float)((groupCenterPoint2.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
+                g.FillPie(bg, (float)((groupCenterPoint1.x * 10) + 206), (float)(206 - (groupCenterPoint1.y * 10)), (float)8, (float)8, (float)0, (float)360);
+                g.FillPie(bg, (float)((groupCenterPoint2.x * 10) + 206), (float)(206 - (groupCenterPoint2.y * 10)), (float)8, (float)8, (float)0, (float)360);
 
                 // Step 5.
                 // 若各群之點與中心的距離總和 大於 threshold，就回到 Step 2. ，否則就結束計算
@@ -188,13 +188,13 @@ namespace K_Means
                 foreach (cord item in group1)
                 {
                     nextDistSum1 += this.distance(item, groupCenterPoint1);
-                    g.FillPie(b1, (float)((item.x * 10) + 206), (float)((item.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
+                    g.FillPie(b1, (float)((item.x * 10) + 206), (float)(206 - (item.y * 10)), (float)8, (float)8, (float)0, (float)360);
                 }
 
                 foreach (cord item in group2)
                 {
                     nextDistSum2 += this.distance(item, groupCenterPoint2);
-                    g.FillPie(b2, (float)((item.x * 10) + 206), (float)((item.y * 10) + 206), (float)8, (float)8, (float)0, (float)360);
+                    g.FillPie(b2, (float)((item.x * 10) + 206), (float)(206 - (item.y * 10)), (float)8, (float)8, (float)0, (float)360);
                 }
 
                 f.Refresh();
