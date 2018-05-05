@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Go = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AlgStep = new System.Windows.Forms.Label();
             this.dgp2 = new System.Windows.Forms.Label();
             this.dgp1 = new System.Windows.Forms.Label();
             this.GroupPoint2 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PointData = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.AlgStep = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -109,6 +109,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // AlgStep
+            // 
+            this.AlgStep.Location = new System.Drawing.Point(11, 50);
+            this.AlgStep.Name = "AlgStep";
+            this.AlgStep.Size = new System.Drawing.Size(240, 12);
+            this.AlgStep.TabIndex = 8;
+            this.AlgStep.Text = "演算步驟： Step X";
             // 
             // dgp2
             // 
@@ -268,20 +276,21 @@
             // 
             // PointData
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.PointData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.PointData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.PointData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.PointData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PointData.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PointData.DefaultCellStyle = dataGridViewCellStyle2;
             this.PointData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PointData.Location = new System.Drawing.Point(0, 129);
+            this.PointData.MultiSelect = false;
             this.PointData.Name = "PointData";
             this.PointData.RowTemplate.Height = 24;
             this.PointData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -297,14 +306,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(483, 526);
             this.panel2.TabIndex = 2;
-            // 
-            // AlgStep
-            // 
-            this.AlgStep.Location = new System.Drawing.Point(11, 50);
-            this.AlgStep.Name = "AlgStep";
-            this.AlgStep.Size = new System.Drawing.Size(240, 12);
-            this.AlgStep.TabIndex = 8;
-            this.AlgStep.Text = "演算步驟： Step X";
             // 
             // MainForm
             // 

@@ -114,6 +114,10 @@ namespace K_Means
             foreach (DataGridViewColumn col in PointData.Columns)
             {
                 col.HeaderText = dt.Columns[col.HeaderText].Caption;
+
+                if ((col.Index < 1) || (col.Index > 2))
+                { col.ReadOnly = true; }
+
             }
 
             this.OffSetP1X.Text = kms.OffieSetGroupPoint1.x.ToString();
@@ -147,6 +151,58 @@ namespace K_Means
             this.pictureBox1.Image = (Image)bmp;
 
             this.DoubleBuffered = true;
+
+
+            this.PointData.RowsAdded += PointData_RowsAdded;
+            this.PointData.RowsRemoved += PointData_RowsRemoved;
+            this.PointData.CellValueChanged += PointData_CellValueChanged;
+
+
+            this.DataChanged();
+        }
+
+        private void PointData_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            this.DataChanged();
+        }
+
+        private void PointData_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            this.DataChanged();
+        }
+
+        private void PointData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((e.ColumnIndex >= 1) && (e.ColumnIndex <= 2))
+            {
+                this.DataChanged();
+            }
+
+        }
+
+        private void DataChanged()
+        {
+            BindingSource bs;
+
+            DataTable dt;
+
+            List<cord> data;
+
+            // 建立座標資料
+            data = new List<cord>();
+            dt = (DataTable)this.PointData.DataSource;
+            foreach (DataRowView drv in dt.DefaultView)
+            {
+                data.Add(new cord((int)drv["Num"], ((double)drv["Cx"]), ((double)drv["Cy"])));
+            }
+
+            // 輸出資料 (畫面清除)
+            this.OutputData(0, null);
+
+            // 輸出資料 (所有座標點)
+            this.OutputData(1, data);
+
+            this.Refresh();
         }
 
         /// <summary>
@@ -602,10 +658,10 @@ namespace K_Means
 
             // 建立座標資料
             data = new List<cord>();
-            dt = this.PointData.DataSource as DataTable;
-            foreach (DataRow dr in dt.Rows)
+            dt = (DataTable)this.PointData.DataSource;
+            foreach (DataRowView drv in dt.DefaultView)
             {
-                data.Add(new cord((int)dr["Num"], ((double)dr["Cx"]), ((double)dr["Cy"])));
+                data.Add(new cord((int)drv["Num"], ((double)drv["Cx"]), ((double)drv["Cy"])));
             }
 
             kms.data = data;
