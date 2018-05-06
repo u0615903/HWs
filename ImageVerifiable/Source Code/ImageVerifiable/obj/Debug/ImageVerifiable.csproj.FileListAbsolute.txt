@@ -1,0 +1,10 @@
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\obj\Debug\ImageVerifiable.csprojResolveAssemblyReference.cache
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\obj\Debug\ImageVerifiable.csproj.GenerateResource.Cache
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\obj\Debug\ImageVerifiable.MainForm.resources
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\bin\Debug\ImageVerifiable.exe.config
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\bin\Debug\ImageVerifiable.exe
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\bin\Debug\ImageVerifiable.pdb
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\bin\Debug\Media.dll
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\bin\Debug\Media.pdb
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\obj\Debug\ImageVerifiable.exe
+M:\HW\課程\HWs\ImageVerifiable\Source Code\ImageVerifiable\obj\Debug\ImageVerifiable.pdb

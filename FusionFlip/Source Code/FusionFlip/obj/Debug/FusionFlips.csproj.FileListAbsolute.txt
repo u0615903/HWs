@@ -1,0 +1,10 @@
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\bin\Debug\FusionFlips.exe.config
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\bin\Debug\FusionFlips.exe
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\bin\Debug\FusionFlips.pdb
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\bin\Debug\Media.dll
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\bin\Debug\Media.pdb
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\obj\Debug\FusionFlips.csprojResolveAssemblyReference.cache
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\obj\Debug\FusionFlips.MainForm.resources
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\obj\Debug\FusionFlips.csproj.GenerateResource.Cache
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\obj\Debug\FusionFlips.exe
+M:\HW\課程\HWs\FusionFlip\Source Code\FusionFlip\obj\Debug\FusionFlips.pdb
